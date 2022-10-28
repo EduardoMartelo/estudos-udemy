@@ -3,7 +3,25 @@
     padding: 0;
 }
 
+/* 
 @keyframes animacao-caixa {
+    from {
+        background: red;
+        border-radius: 0px;
+        top: 0;
+        left: 0;
+    }
+
+    to {
+        background: green;
+        border-radius: 300px;
+        top: 200px;
+        left: 200px;
+    }
+}
+
+
+@-moz-keyframes animacao-caixa {
     from {
         background: red;
     }
@@ -13,12 +31,38 @@
     }
 }
 
-#caixa {
+
+@-o-keyframes animacao-caixa {
+    from {
+        background: red;
+    }
+
+    to {
+        background: green;
+    }
+} */
+
+
+/* #caixa {
     width: 300px;
     height: 300px;
     background: red;
+    position: relative;
+    overflow: hidden;
+    /* -webkit-animation-name: animacao-caixa;
+    -moz-animation-name: animacao-caixa;
+    -o-animation-name: animacao-caixa;
     animation-name: animacao-caixa;
     animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: 2;
+    animation-direction: alternate; 
+
+    -webkit-animation: animacao-caixa 5s 3s 2 alternate;
+    -moz-animation: animacao-caixa 5s 3s 2 alternate;
+    -o-animation: animacao-caixa 5s 3s 2 alternate;
+    animation: animacao-caixa 5s 3s 2 alternate;
+    Todas as animações acima em uma única linha */
 }
 
 
@@ -67,3 +111,21 @@
     -moz-border-radius: 10px 50px;
     border-radius: 10px 50px; 
 }   */
+
+
+
+
+/* Transições */
+
+#caixa {
+    width: 300px;
+    height: 300px;
+    background: orange;
+}
+
+#caixa:hover {
+    width: 400px;
+    background: yellow;
+    /*transition: width 3s, background 3s; usar webkit**/
+    transition: all 3s;
+}
